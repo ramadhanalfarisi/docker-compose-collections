@@ -1,0 +1,10 @@
+services:
+  jenkins-agent-1:
+    container_name: jenkins-agent-1
+    image: jenkins-agent:latest
+    environment:
+      - JENKINS_URL=http://192.168.0.107:8888/
+      - JENKINS_SECRET=bbfd1aeae95911674892cb1ea9fefc92ecc96708910f3ccb4f6978327801fd6e
+      - JENKINS_AGENT_NAME=Agent1
+    ports:
+      - 7022:22
